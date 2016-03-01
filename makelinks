@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+get_abs_path () {
+    path=$1
+    curdir=$PWD    
+    abspath=$(cd $1; echo $PWD)
+    cd $curdir
+    echo $abspath
+}
+
+link_file () {
+    target=$1
+    destination=$2
+    echo -n "Linking $destination -> $target ... "
+    if [ -e "$destination" ]; then
+        echo "Exists"
+    else
+        ln -s "$target" "$destination" > /dev/null 2>&1
+        rv=$?
+        if [ "$rv" == "0" ]; then
+            echo "OK"
+        else
+            echo "Failed"
+        fi
+    fi
+    return $rv
+}
+
+home_dir=$(get_abs_path ~)
+script_dir=$(get_abs_path $(dirname $0))
+
+sub_dirs=configs
+for sub_dir in $sub_dirs; do
+    echo "$sub_dir"
+    for dotfile in `find $script_dir/$sub_dir -mindepth 1 -maxdepth 1`; do
+        link_file $dotfile $home_dir/.$(basename $dotfile)
+    done
+done
