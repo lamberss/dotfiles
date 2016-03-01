@@ -13,7 +13,7 @@
   (setq org-capture-templates
 	'(("t" "My TODO task format." entry
 	   (file "todo.org")
-	   "* TODO %?
+	   "** TODO %?
 SCHEDULED: %t")))
 
   (defun sel-org-task-capture ()
