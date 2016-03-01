@@ -2,9 +2,9 @@
 # ~/.bashrc
 
 # Source global definitions
-#if [ -f /etc/bashrc ]; then
-#    . /etc/bashrc
-#fi
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
 
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
