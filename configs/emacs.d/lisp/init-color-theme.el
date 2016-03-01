@@ -1,5 +1,8 @@
 (use-package solarized-theme
-  :ensure t)
+  :ensure t
+  :config
+  (setq solarized-scale-org-headlines nil)
+  )
 
 (load-theme 'solarized-dark)
 
