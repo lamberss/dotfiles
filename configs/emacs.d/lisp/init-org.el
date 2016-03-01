@@ -12,9 +12,8 @@
 
   (setq org-capture-templates
 	'(("t" "My TODO task format." entry
-	   (file "todo.org")
-	   "** TODO %?
-SCHEDULED: %t")))
+	   (file+headline "todo.org" "Unfiled")
+	   "* TODO %?\n    SCHEDULED: %t")))
 
   (defun sel-org-task-capture ()
     "Capture a task with my default template."
