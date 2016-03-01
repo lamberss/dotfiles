@@ -12,5 +12,7 @@
 (setq make-backup-files nil)
 
 (require 'init-elpa)
+(require 'init-global-functions)
 (require 'init-evil)
 (require 'init-color-theme)
+(require 'init-org)
