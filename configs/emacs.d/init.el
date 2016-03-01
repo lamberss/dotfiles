@@ -16,3 +16,4 @@
 (require 'init-evil)
 (require 'init-color-theme)
 (require 'init-org)
+(require 'init-powerline)
