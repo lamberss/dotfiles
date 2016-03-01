@@ -1,4 +1,5 @@
 # Emacs stuff
 *~
+configs/emacs.d/bookmarks
 configs/emacs.d/elpa
 configs/emacs.d/url
