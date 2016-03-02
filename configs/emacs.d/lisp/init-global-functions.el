@@ -4,4 +4,12 @@
       (find-file-other-window file)
     (find-file file)))
 
+(defun sel-datestamp ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d")))
+
+(defun sel-timestamp ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%dT%H:%M:%S")))
+
 (provide 'init-global-functions)
