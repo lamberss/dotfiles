@@ -9,11 +9,15 @@
   (setq org-todo-keywords
 	'((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
   (setq org-agenda-files '("~/org/"))
-
   (setq org-capture-templates
 	'(("t" "My TODO task format." entry
 	   (file+headline "todo.org" "Unfiled")
 	   "* TODO %?\n    SCHEDULED: %t")))
+  (setq org-log-done (quote time))
+  (setq org-log-redeadline (quote time))
+  (setq org-log-reschedule (quote time))
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-if-done t)
 
   (defun sel-org-task-capture ()
     "Capture a task with my default template."
