@@ -1,9 +1,6 @@
-(use-package solarized-theme
-  :ensure t
-  :config
-  (setq solarized-scale-org-headlines nil)
-  )
+(use-package tangotango-theme
+  :ensure t)
 
-(load-theme 'solarized-dark)
+(load-theme 'tangotango)
 
 (provide 'init-color-theme)
