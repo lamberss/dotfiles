@@ -13,6 +13,7 @@
 
 (require 'init-elpa)
 (require 'init-global-functions)
+(require 'init-cc)
 (require 'init-cmake)
 (require 'init-evil)
 (require 'init-color-theme)
