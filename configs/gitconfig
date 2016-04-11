@@ -1,0 +1,6 @@
+[user]
+	name = Steven E. Lamberson, Jr.
+	email = steven.lamberson@gmail.com
+	signingkey = 6080C666
+[core]
+	editor = emacs -nw
